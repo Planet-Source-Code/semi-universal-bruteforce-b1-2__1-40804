@@ -1,0 +1,13 @@
+frmSettings = 62, 78, 868, 544, C, 22, 29, 828, 495, C
+frmProgress = 44, 58, 850, 524, C, 66, 87, 872, 553, C
+frmSelectWin = 0, 0, 803, 466, C, 32, 170, 838, 636, C
+modGlobal = 410, 308, 1216, 774, C
+modBrute = 88, 120, 894, 586, C
+frmScript = 88, 116, 894, 582, C, 44, 58, 850, 524, C
+cAPI = 141, 77, 939, 543, C
+frmAbout = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+modBruteScripts = 0, 0, 0, 0, C
+modExcelBrute = 0, 0, 0, 0, C
+modWordBrute = 0, 0, 0, 0, C
+modBrowser = 0, 0, 0, 0, C
+modMClick = 0, 0, 0, 0, C
