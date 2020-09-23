@@ -1,0 +1,56 @@
+Sub Init
+	
+	'-----------------------------------------------------------------------
+	'Semis default BruteScript v1.0
+	'-----------------------------------------------------------------------
+	'
+	'This script is designed for a textbox with a commandbutton 
+	'that shows a MessageBox telling you if the Code is correct.
+	'This script does NOT work with limitations that only allow you 
+	'to try 3 times or similar things that prevent you from trying again.
+    
+	'just fill in the new hWnds and the error msg window title
+     
+     
+	'Welcome Message 
+    	MsgBox "Semis default Brutescript v1.0" & vbcr & "for Universal Bruteforce",vbInformation,"Br00tScript"
+     
+     
+End Sub
+
+
+Sub Brute
+	
+	'-----------------------------------------------------------------------
+	'SETTINGS
+	'-----------------------------------------------------------------------
+
+	'Window handle of the Textbox
+	hWnd  = 1901706  
+
+	'Window handle of the OK button
+	hWndOK = 2295020
+
+	'Title of the Messagebox saying 'Invalid Code'
+	ErrTtl = "error"
+	
+	'-----------------------------------------------------------------------
+	'MAIN SCRIPT
+	'-----------------------------------------------------------------------	
+	BF.aSetWindowText hWnd,BF.Key,True		'Put new code to Textbox
+	BF.aClick hWndOK						'Send MouseClick to OK button
+	
+	Do While BF.aFindWindow(ErrTtl) = 0		'Wait for MessageBox to appear
+	BF.aDoEvents
+	Loop     
+	
+	ErrMsg = BF.aFindWindow(ErrTtl)			'Find MessageBox
+	hwndOKMsg = BF.aGetDlgItem(ErrMsg,2)	'Get OK Button's hWnd with GetDlgItem
+	
+	BF.aClick hwndOKMsg						'Send MouseClick to MsgBox's OK button
+	
+	Do Until BF.aFindWindow(ErrTtl) = 0		'Wait for MessageBox to disappear
+	BF.aDoevents
+	Loop
+	
+End Sub
